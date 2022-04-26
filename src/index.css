@@ -1,0 +1,66 @@
+body {
+  margin: 2rem;
+  font-family: 'roboto';
+}
+
+.button {
+  font: inherit;
+  border-radius:5px;
+  background-color: grey;
+  border: 1px solid;
+  margin: 4px;
+  padding: 2px;
+}
+
+.button:hover {
+  background-color: aliceblue;
+  border-color: black;
+}
+
+.button--alt {
+  background-color: brown;
+}
+
+.button--alt:hover {
+  background-color: rgb(80, 3, 3);
+}
+
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  padding: 0.8rem;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.popup {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  padding: 0.8rem;
+  width: 15rem;
+  top: 5vh;
+  left:20rem;
+  z-index: 5;
+  position: fixed;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 3;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
