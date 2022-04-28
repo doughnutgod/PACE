@@ -9,6 +9,7 @@ function NewForm() {
     const outputref = useRef();
     const colorref = useRef();
     const labelref = useRef();
+    const coordref = useRef();
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -19,9 +20,11 @@ function NewForm() {
         const enteredout = outputref.current.value;
         const enteredcol = colorref.current.value;
         const enteredlab = labelref.current.value;
+        const enteredcoord = labelref.current.value;
 
         const formdata = {
             Location: enteredloc,
+            Coordinates: enteredcoord,
             Pool_Size: enteredpool,
             Cust_Count: enteredcust,
             Output: enteredout,
@@ -37,8 +40,12 @@ function NewForm() {
     return <Card>
         <form className={classes.form} onSubmit={handleSubmit}>
             <div className={classes.container}>
-                <label htmlFor='title'>Location Address</label>
-                <input type='text' required id='title' ref={locationinput}/>
+                <label htmlFor='location'>Location Address</label>
+                <input type='text' id='location' ref={locationinput}/>
+            </div>
+            <div className={classes.container}>
+                <label htmlFor='coordinate'>Coordinate Adress</label>
+                <input type='text' id='coordinate' ref={coordref}/>
             </div>
             <div className={classes.container}>
                 <label htmlFor='poolsize'>Pool Dimensions in feet</label>
